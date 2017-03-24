@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Calculadora;
 
 /**
  *
- * @author estudiantes
+ * @author Estudiantes
  */
 public class Interfaz extends javax.swing.JFrame {
     Calculadora calculadoraGrafica;
@@ -31,28 +32,28 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         etiquetaNum1 = new javax.swing.JTextField();
         etiquetaNum2 = new javax.swing.JTextField();
-        botonSumar = new javax.swing.JButton();
+        botonsumar = new javax.swing.JButton();
         botonrestar = new javax.swing.JButton();
         botonmultiplicar = new javax.swing.JButton();
         botondividir = new javax.swing.JButton();
-        etiquetaFinal = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        etiquetaFinal = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Numero 1:");
+        jLabel1.setText("Número 1: ");
 
-        jLabel2.setText("Numero 2:");
+        jLabel2.setText("Número 2: ");
 
-        botonSumar.setText("+");
-        botonSumar.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonsumar.setText("+");
+        botonsumar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonSumarMouseClicked(evt);
+                botonsumarMouseClicked(evt);
             }
         });
-        botonSumar.addActionListener(new java.awt.event.ActionListener() {
+        botonsumar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonSumarActionPerformed(evt);
+                botonsumarActionPerformed(evt);
             }
         });
 
@@ -62,6 +63,11 @@ public class Interfaz extends javax.swing.JFrame {
                 botonrestarMouseClicked(evt);
             }
         });
+        botonrestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonrestarActionPerformed(evt);
+            }
+        });
 
         botonmultiplicar.setText("*");
         botonmultiplicar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -69,11 +75,21 @@ public class Interfaz extends javax.swing.JFrame {
                 botonmultiplicarMouseClicked(evt);
             }
         });
+        botonmultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonmultiplicarActionPerformed(evt);
+            }
+        });
 
         botondividir.setText("/");
         botondividir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botondividirMouseClicked(evt);
+            }
+        });
+        botondividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botondividirActionPerformed(evt);
             }
         });
 
@@ -86,63 +102,66 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(etiquetaNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etiquetaNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etiquetaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(etiquetaNum2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(etiquetaNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(botonSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonrestar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonmultiplicar)
-                        .addGap(12, 12, 12)
-                        .addComponent(botondividir)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(botonsumar))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botonrestar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(botonmultiplicar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botondividir))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(etiquetaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(etiquetaNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(etiquetaNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonSumar)
+                    .addComponent(botonsumar)
                     .addComponent(botonrestar)
                     .addComponent(botonmultiplicar)
                     .addComponent(botondividir))
-                .addGap(18, 18, 18)
+                .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiquetaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(64, 64, 64))
+                    .addComponent(jLabel3)
+                    .addComponent(etiquetaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSumarActionPerformed
-        
-    }//GEN-LAST:event_botonSumarActionPerformed
-
-    private void botonSumarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSumarMouseClicked
+    private void botonsumarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonsumarMouseClicked
         calculadoraGrafica.numero1=Double.parseDouble(etiquetaNum1.getText());
         calculadoraGrafica.numero2=Double.parseDouble(etiquetaNum2.getText());
         etiquetaFinal.setText(String.valueOf(calculadoraGrafica.sumar()));
-    }//GEN-LAST:event_botonSumarMouseClicked
+    }//GEN-LAST:event_botonsumarMouseClicked
 
     private void botonrestarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonrestarMouseClicked
         calculadoraGrafica.numero1=Double.parseDouble(etiquetaNum1.getText());
@@ -161,6 +180,22 @@ public class Interfaz extends javax.swing.JFrame {
         calculadoraGrafica.numero2=Double.parseDouble(etiquetaNum2.getText());
         etiquetaFinal.setText(String.valueOf(calculadoraGrafica.dividir()));
     }//GEN-LAST:event_botondividirMouseClicked
+
+    private void botonsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonsumarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonsumarActionPerformed
+
+    private void botonrestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonrestarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonrestarActionPerformed
+
+    private void botonmultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonmultiplicarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonmultiplicarActionPerformed
+
+    private void botondividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondividirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botondividirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,10 +233,10 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonSumar;
     private javax.swing.JButton botondividir;
     private javax.swing.JButton botonmultiplicar;
     private javax.swing.JButton botonrestar;
+    private javax.swing.JButton botonsumar;
     private javax.swing.JTextField etiquetaFinal;
     private javax.swing.JTextField etiquetaNum1;
     private javax.swing.JTextField etiquetaNum2;
