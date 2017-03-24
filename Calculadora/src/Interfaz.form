@@ -34,7 +34,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="EtiquetaNum2" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="etiquetaNum2" min="-2" pref="73" max="-2" attributes="0"/>
                           <Component id="etiquetaNum1" min="-2" pref="73" max="-2" attributes="0"/>
                           <Component id="etiquetaFinal" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
                       </Group>
@@ -65,7 +65,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="EtiquetaNum2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="etiquetaNum2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="28" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -97,7 +97,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="etiquetaNum1">
     </Component>
-    <Component class="javax.swing.JTextField" name="EtiquetaNum2">
+    <Component class="javax.swing.JTextField" name="etiquetaNum2">
     </Component>
     <Component class="javax.swing.JButton" name="botonSumar">
       <Properties>

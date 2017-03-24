@@ -30,7 +30,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         etiquetaNum1 = new javax.swing.JTextField();
-        EtiquetaNum2 = new javax.swing.JTextField();
+        etiquetaNum2 = new javax.swing.JTextField();
         botonSumar = new javax.swing.JButton();
         botonrestar = new javax.swing.JButton();
         botonmultiplicar = new javax.swing.JButton();
@@ -93,7 +93,7 @@ public class Interfaz extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EtiquetaNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(etiquetaNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(etiquetaNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(etiquetaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
@@ -117,7 +117,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(EtiquetaNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etiquetaNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonSumar)
@@ -135,23 +135,31 @@ public class Interfaz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSumarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_botonSumarActionPerformed
 
     private void botonSumarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSumarMouseClicked
-        // TODO add your handling code here:
+        calculadoraGrafica.numero1=Double.parseDouble(etiquetaNum1.getText());
+        calculadoraGrafica.numero2=Double.parseDouble(etiquetaNum2.getText());
+        etiquetaFinal.setText(String.valueOf(calculadoraGrafica.sumar()));
     }//GEN-LAST:event_botonSumarMouseClicked
 
     private void botonrestarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonrestarMouseClicked
-        // TODO add your handling code here:
+        calculadoraGrafica.numero1=Double.parseDouble(etiquetaNum1.getText());
+        calculadoraGrafica.numero2=Double.parseDouble(etiquetaNum2.getText());
+        etiquetaFinal.setText(String.valueOf(calculadoraGrafica.restar()));
     }//GEN-LAST:event_botonrestarMouseClicked
 
     private void botonmultiplicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonmultiplicarMouseClicked
-        // TODO add your handling code here:
+        calculadoraGrafica.numero1=Double.parseDouble(etiquetaNum1.getText());
+        calculadoraGrafica.numero2=Double.parseDouble(etiquetaNum2.getText());
+        etiquetaFinal.setText(String.valueOf(calculadoraGrafica.multiplicar()));
     }//GEN-LAST:event_botonmultiplicarMouseClicked
 
     private void botondividirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botondividirMouseClicked
-        // TODO add your handling code here:
+        calculadoraGrafica.numero1=Double.parseDouble(etiquetaNum1.getText());
+        calculadoraGrafica.numero2=Double.parseDouble(etiquetaNum2.getText());
+        etiquetaFinal.setText(String.valueOf(calculadoraGrafica.dividir()));
     }//GEN-LAST:event_botondividirMouseClicked
 
     /**
@@ -190,13 +198,13 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField EtiquetaNum2;
     private javax.swing.JButton botonSumar;
     private javax.swing.JButton botondividir;
     private javax.swing.JButton botonmultiplicar;
     private javax.swing.JButton botonrestar;
     private javax.swing.JTextField etiquetaFinal;
     private javax.swing.JTextField etiquetaNum1;
+    private javax.swing.JTextField etiquetaNum2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
